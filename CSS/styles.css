@@ -1,0 +1,376 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* NAV BAR STYLES */
+.navbar {
+    position: sticky;
+    width: 100%;
+    padding: 30px 0;
+    background: black;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    color: lightgray;
+    font-size: 35px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    color: lightgray;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: #7492b9;
+}
+
+.navbar span {
+    color: #7492b9;
+}
+
+/* MENU BUTTON STYLES */
+
+.menu-button {
+    color: lightgray;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+    transition: color 0.3s ease;
+}
+
+.menu-button:hover {
+    color:#7492b9;
+}
+
+/* INDEX STYLES */
+.home {
+    display: flex;
+    background: url(../Images/New-background-image.png) no-repeat center;
+    height: 90vh;
+    color: lightgray;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text1 {
+    font-size: 27px;
+}
+
+
+.home .home-content .text2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text3 {
+    font-size: 27px;
+}
+
+.home .home-content .text2 span {
+    color: #7492b9;
+}
+
+
+/* ABOUT ME STYLES */
+.about {
+    padding-top: 200px;;
+    background: url(../Images/Main-background-image.png);
+    font-family: 'Poppins' sans-serif;
+}
+
+.about .title {
+    font-family: 'Ubuntu' sans-serif;
+    color: lightgray;
+    text-align: center;
+    font-size: 59px;
+    font-weight: 600;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+.title span {
+    color: #7492b9;
+}
+
+.about .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about .about-content .column-left{
+    width: 45%;
+}
+
+.image1 {
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.about .about-content .column-right{
+    width: 45%;
+}
+
+.about .about-content .column-right .text1{
+    padding-top: 10px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: lightgray;
+    align-items: center;
+}
+
+.about .about-content .column-right .text2{
+    padding-top: 350px;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: lightgray;
+}
+
+.about .about-content .column-right .text3{
+    padding-top: 375px; 
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: lightgray;
+}
+
+
+.about .about-content .column-right p{
+    color: lightgray;
+    font-size: 15px;
+}
+
+/* JOURNEY STYLES */
+.journey {
+    padding-top: 200px;;
+    background: url(../Images/Main-background-image.png);
+    /* background-color: #002147; */
+    font-family: 'Poppins' sans-serif;
+
+}
+
+.timeline {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    max-width: 700px;
+}
+
+.timeline-header-title{
+    font-size: 75px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: lightgray;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.timeline-header-title span{
+    color: #7492b9;
+}
+
+.timeline-content-title{
+    font-weight: normal;
+    font-size: 59px;
+    margin: -10px 0 0 0;
+    transition: 0.4s;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: lightgray;
+    font-family: 'Ubuntu' sans-serif;
+}
+
+.timeline-content-desc {
+    margin: 0;
+    font-size: 20px;
+    box-sizing: border-box;
+    color: white;
+    font-family: '';
+    font-weight: bold;
+    line-height: 25px;;
+}
+
+.timeline:before{
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    content: "";
+}
+
+.timeline-item {
+    padding: 40px;
+    box-sizing: border-box;
+    width: calc(50% - 40px);
+    display: flex;
+    position: relative;
+    transform: translateY(-80px);
+}
+
+.timeline-item:before{
+    content: attr(data-text);
+    letter-spacing: 3px;
+    width: 100%;
+    position: absolute;
+    color: lightgray;
+    top: 70%;
+    margin-top: -5px;
+    padding-left: 15px;
+    opacity: 0;
+    right: calc(-100% - 55px);
+}
+
+.timeline-item:nth-child(even){
+    align-self: flex-end;
+}
+
+
+.timeline-img {
+    max-width: 75%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.timeline-container{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline-container:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    margin-bottom: 100px;
+  }
+
+  /* RESPOSIVBE STYLES */
+
+  @media (max-width: 1104px) {
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 947px) {
+    .menu-button {
+        display: block;
+        z-index: 999;
+    }
+    .max-width {
+        padding: 0 50px;
+    }
+    .menu-button i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 250px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active {
+        left: 0%;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text2 {
+        font-size: 35px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER STYLES */
+footer {
+    /* position: fixed; */
+    width: 100%;
+    padding: 10px;
+    background: black;
+}
+
+footer li {
+    list-style: none;
+    display: inline-block;
+}
+
+footer li img {
+    max-width: 50px;
+    margin-left: 25px;
+}
+
+footer .icons {
+    margin: auto;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
